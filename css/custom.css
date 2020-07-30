@@ -1,0 +1,264 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cc0001;
+}
+
+.box {
+  background: url("../images/cloud-bg2.PNG") repeat;
+  margin-top: 18px;
+  height: 100vh;
+}
+.container {
+  width: 60%;
+  margin: 0px auto;
+  padding: 1em 0 !important;
+}
+.container h3 {
+  color: #ffffff;
+  font-family: cursive;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 20%;
+  padding: 10px 0px;
+}
+.column-full {
+  flex: 100%;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  margin: 0px auto;
+  border-radius: 50%;
+  padding: 20px;
+  color: #cc0001;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.circle:hover,
+.activeCircle {
+  background-color: #cc0001;
+}
+.circle:hover .aligner,
+.activeCircle .aligner {
+  color: #ffffff;
+}
+
+.circle-never,
+.circle-neverLast {
+  background-image: url("../images/calendar-icon.PNG");
+}
+.circle-occasional {
+  background-image: url("../images/occasional-icon.PNG");
+}
+
+.circle-hours {
+  background-image: url("../images/hourly-icon.PNG");
+}
+.circle-yearly {
+  background-image: url("../images/yearly-icon.PNG");
+}
+
+.aligner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  font-size: 1em;
+}
+
+.btn {
+  background: #5fa4ba;
+  border: 1px solid #5fa4ba;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bolder;
+  opacity: 0.7;
+  margin: 50px auto;
+  cursor: pointer;
+  outline: none;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn span {
+  color: #cc0001;
+  margin-left: 10px;
+}
+
+.range-slider {
+  width: 90%;
+  text-align: center;
+  margin: 0px auto;
+  position: relative;
+}
+.rs-range {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 15px;
+  background: #cc0001;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #fff;
+}
+
+.rs-range:focus {
+  outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #cc0001;
+  border-radius: 0px;
+  border: 0px solid #010101;
+  z-index: 1;
+}
+
+.rs-range::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #cc0001;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #cc0001;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: #cc0001;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+
+/* .rs-range::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 25px;
+  border-style: solid;
+  border-color: #cc0001 #0000 #0000;
+  position: absolute;
+  top: 39px;
+  left: -2px;
+} */
+
+.rs-range::-moz-range-thumb {
+  box-shadow: none;
+  border: 0px solid #cc0001;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: #cc0001;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+
+.rs-range::-moz-focus-outer {
+  border: 0;
+}
+
+.rs-label {
+  position: relative;
+  transform-origin: center center;
+  display: block;
+  width: 98px;
+  height: 98px;
+  background: transparent;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 22px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  margin-top: 20px;
+  margin-left: -38px;
+  left: attr(value);
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
+  display: none;
+}
+
+.range-slider .posBdr {
+  border-right: 1px solid #ffffff;
+  position: relative;
+}
+.range-slider .bdr1 {
+  left: -33%;
+}
+.range-slider .bdr2 {
+  left: -66%;
+}
+
+.relevantBox {
+  display: flex;
+  margin-top: 10px;
+}
+.relevantBox div {
+  flex: 33%;
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* .rs-label::after {
+  content: "kg";
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  margin-top: -2px;
+} */
+
+/* Screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* Screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .container h3 {
+    font-size: 1.2em;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .box {
+    height: auto;
+  }
+}

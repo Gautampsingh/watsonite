@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <h3>RESULT OF THE TEST</h3>
+            <div class="row">
+                <div class="column">
+                    <div class="circle circle-never">
+                        <div class="aligner">Never</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="circle circle-occasional">
+                        <div class="aligner">Occasionally</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="circle circle-hours">
+                        <div class="aligner">4 hours</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="circle circle-yearly">
+                        <div class="aligner">Yearly</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="circle circle-neverLast">
+                        <div class="aligner">Never</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column column-full">
+                    <div class="range-slider">
+                        <span id="rs-bullet" class="rs-label">0</span>
+                        <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="100">
+                        <span class="posBdr bdr1"></span>
+                        <span class="posBdr bdr2"></span>
+
+                        <div class="relevantBox">
+                            <div>LESS RELEVANT</div>
+                            <div>RELEVANT</div>
+                            <div>VERY RELEVANT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="btn">TRY AGAIN <span>></span></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
