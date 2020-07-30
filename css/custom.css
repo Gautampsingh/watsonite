@@ -28,10 +28,12 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.container .row:nth-child(3) {
+  margin-top: 50px;
+}
 
 .column {
   flex: 20%;
-  padding: 10px 0px;
 }
 .column-full {
   flex: 100%;
@@ -50,7 +52,7 @@ body {
 }
 .circle:hover,
 .activeCircle {
-  background-color: #cc0001;
+  background-color: #cc0001 !important;
 }
 .circle:hover .aligner,
 .activeCircle .aligner {

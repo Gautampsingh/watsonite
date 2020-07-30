@@ -1,5 +1,5 @@
 // detect the devices
-detectMob();
+// detectMob();
 function detectMob() {
   const toMatch = [
     /Android/i,
@@ -19,21 +19,26 @@ function detectMob() {
 // slider value
 var rangeSlider = document.getElementById("rs-range-line");
 var rangeBullet = document.getElementById("rs-bullet");
-if (detectMob()) {
-  rangeSlider.addEventListener("input", showSliderValue, false);
-  removeClass(true);
-} else {
-  rangeSlider.addEventListener("input", showSliderValue, false);
-  removeClass(false);
-}
+rangeSlider.addEventListener("input", showSliderValue, false);
 
 // reset button
 var resetBtn = document.querySelector(".btn");
 resetBtn.addEventListener("click", reset);
 
+if (detectMob()) {
+  removeClass(true);
+} else {
+  // removeClass(false);
+}
+
 function removeClass(status) {
   if (status) {
     console.log(`Status ${status}`);
+    var getCircle = document.querySelectorAll(".circle");
+    for (let i = 0; i < getCircle.length; i++) {
+      getCircle[i].style.display = "none";
+    }
+    document.querySelector(".activeCircle").style.display = "block";
   } else {
     var getCircle = document.querySelectorAll(".circle");
     for (let i = 0; i < getCircle.length; i++) {
@@ -65,6 +70,14 @@ function showSliderValue() {
   } else if (bulletValue === 100) {
     var element = document.querySelector(".circle-neverLast");
     element.classList.add("activeCircle");
+  }
+
+  if (detectMob()) {
+    var getCircle = document.querySelectorAll(".circle");
+    for (let i = 0; i < getCircle.length; i++) {
+      getCircle[i].style.display = "none";
+    }
+    document.querySelector(".activeCircle").style.display = "block";
   }
 }
 
